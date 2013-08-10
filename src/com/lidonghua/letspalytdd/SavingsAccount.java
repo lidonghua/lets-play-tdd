@@ -12,5 +12,6 @@ public class SavingsAccount {
     }
 
     public void withdraw(int amount) {
+        balance -= amount;
     }
 }
