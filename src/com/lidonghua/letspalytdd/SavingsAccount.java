@@ -1,10 +1,13 @@
 package com.lidonghua.letspalytdd;
 
 public class SavingsAccount {
+    private int balance = 0;
+
     public void deposit(int amount) {
+        balance += amount;
     }
 
     public int balance() {
-        return 0;
+        return balance;
     }
 }
