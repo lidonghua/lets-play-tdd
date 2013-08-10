@@ -10,4 +10,7 @@ public class SavingsAccount {
     public int balance() {
         return balance;
     }
+
+    public void withdraw(int amount) {
+    }
 }

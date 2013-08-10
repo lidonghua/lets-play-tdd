@@ -6,9 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class SavingsAccountTest {
     @Test
-    public void nothing() {
+    public void depositAndWithdrawal() {
         SavingsAccount account = new SavingsAccount();
         account.deposit(100);
-        assertEquals(100, account.balance());
+        assertEquals("after deposit", 100, account.balance());
+        account.withdraw(50);
+        assertEquals("after withdraw", 50, account.balance());
     }
 }
