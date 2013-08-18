@@ -1,5 +1,4 @@
-package com.lidonghua.letspalytdd;
-
+package com.lidonghua.finances;
 
 import org.junit.Test;
 

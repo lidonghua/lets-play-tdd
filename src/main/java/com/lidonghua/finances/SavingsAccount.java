@@ -1,4 +1,4 @@
-package com.lidonghua.letspalytdd;
+package com.lidonghua.finances;
 
 public class SavingsAccount {
     private int balance = 0;
