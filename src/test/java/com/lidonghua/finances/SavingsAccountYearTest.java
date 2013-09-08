@@ -41,13 +41,26 @@ public class SavingsAccountYearTest {
     }
 
     @Test
-    public void withdrawingMoreThanPrincipalIncursCapitalGainsTax() {
+    public void startingPrincipal() {
         SavingsAccountYear year = new SavingsAccountYear(10000, 7000, 10);
-        year.withdrawal(3000);
-        assertEquals(7700, year.endingBalance());
-        year.withdrawal(5000);
-        assertEquals(2200 - 1250, year.endingBalance());
+        assertEquals(3000, year.startingPrincipal());
     }
+
+    @Test
+    public void endingPrincipal() {
+        SavingsAccountYear year = new SavingsAccountYear(10000, 7000, 10);
+        assertEquals("starting pricipal", 3000, year.startingPrincipal());
+        year.withdrawal(2000);
+        assertEquals("ending principal", 1000, year.endingPrincipal());
+    }
+//    @Test
+//    public void withdrawingMoreThanPrincipalIncursCapitalGainsTax() {
+//        SavingsAccountYear year = new SavingsAccountYear(10000, 7000, 10);
+//        year.withdrawal(3000);
+//        assertEquals(7700, year.endingBalance());
+//        year.withdrawal(5000);
+//        assertEquals(2200 - 1250, year.endingBalance());
+//    }
 
     private SavingsAccountYear newAccount() {
         return new SavingsAccountYear(10000, 10);
